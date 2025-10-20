@@ -6,11 +6,19 @@ export function Guarantees() {
       title: "Возврат средств",
       description:
         "Если вам не понравится первое занятие, мы вернем 100% стоимости курса без вопросов в течение 3 дней.",
+      icon: "/Shield.svg"
     },
     {
       title: "Доступ к записям",
       description:
         "Все занятия записываются в HD качестве. Вы получите доступ к видео на 6 месяцев после окончания курса.",
+      icon: "/Camera.svg"
+    },
+    {
+      title: "Методические материалы",
+      description:
+        "Все рецепты, техники и секреты в удобном формате PDF навсегда остаются с вами для повторения дома.",
+      icon: "/Book.svg"
     },
   ];
 
@@ -21,16 +29,7 @@ export function Guarantees() {
         <div className="guarantees-grid">
           {guarantees.map((guarantee, index) => (
             <div key={index} className="guarantee-card">
-              <div className="guarantee-icon">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg>
-              </div>
+              <div className="guarantee-icon"><img src={guarantee.icon} alt="" /></div>
               <h3>{guarantee.title}</h3>
               <p>{guarantee.description}</p>
             </div>

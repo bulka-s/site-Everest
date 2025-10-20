@@ -1,13 +1,26 @@
 .benefits {
-  padding: 64px 0;
-  background-color: white;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: white;
+
+  text-align: left;
+  margin-bottom: 120px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .benefits-title {
   font-size: 36px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 50px;
   color: #1a1a1a;
 }
 
@@ -29,23 +42,6 @@
   transform: translateY(-4px);
 }
 
-.benefit-icon {
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(253, 141, 60, 0.1);
-  border-radius: 12px;
-  margin-bottom: 16px;
-}
-
-.benefit-icon svg {
-  width: 28px;
-  height: 28px;
-  color: #fd8d3c;
-}
-
 .benefit-card h3 {
   font-size: 24px;
   font-weight: 600;
@@ -59,6 +55,78 @@
   line-height: 1.6;
 }
 
+.course-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.course-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.course-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.course-content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.course-content p {
+  font-size: 16px;
+  color: rgba(26, 26, 26, 0.7);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: auto;
+}
+
+.course-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.course-btn {
+  background: #fd8d3c;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  width: 140px;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(253, 141, 60, 0.08);
+}
+
+.course-btn:hover {
+  background: #ff9e53;
+}
+
 @media (min-width: 768px) {
   .benefits-grid {
     grid-template-columns: 1fr 1fr;
@@ -67,7 +135,7 @@
 
 @media (min-width: 1024px) {
   .benefits {
-    padding: 96px 0;
+    padding: 80px 0;
   }
 
   .benefits-title {

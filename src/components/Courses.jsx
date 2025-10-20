@@ -69,7 +69,7 @@ export function Courses() {
                 <p>{course.description}</p>
                 <div className="course-footer">
                   <span className="course-price">{course.price}</span>
-                  <button className="btn btn-primary">Записаться</button>
+                  <button className="btn-primary">Записаться</button>
                 </div>
               </div>
             </div>

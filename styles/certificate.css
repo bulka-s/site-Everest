@@ -1,6 +1,14 @@
 .certificate {
-  padding: 64px 0;
-  background-color: white;
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: white;
+
+  text-align: left;
+  margin-bottom: 120px;
 }
 
 .certificate-grid {
@@ -16,7 +24,7 @@
   color: #1a1a1a;
 }
 
-.certificate-content > p {
+.certificate-content>p {
   font-size: 18px;
   line-height: 1.7;
   color: rgba(26, 26, 26, 0.8);
@@ -39,19 +47,24 @@
 }
 
 .certificate-list li::before {
-  content: "✓";
-  color: #fd8d3c;
-  font-weight: 700;
-  font-size: 20px;
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('/Check.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 12px;
+  vertical-align: middle;
 }
 
 .certificate-preview {
-  background: linear-gradient(135deg, #fd8d3c, #ff6b35);
+  background: #FFF5EE;
   padding: 48px;
   border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(253, 141, 60, 0.3);
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.3);
   text-align: center;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .certificate-preview h3 {
@@ -71,7 +84,7 @@
 
 @media (min-width: 1024px) {
   .certificate {
-    padding: 96px 0;
+    padding: 80px 0;
   }
 
   .certificate-grid {

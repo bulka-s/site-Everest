@@ -1,5 +1,5 @@
 .how-it-works {
-  padding: 64px 0;
+  margin-bottom: 120px;
 }
 
 .how-it-works-title {
@@ -57,10 +57,6 @@
 }
 
 @media (min-width: 1024px) {
-  .how-it-works {
-    padding: 96px 0;
-  }
-
   .how-it-works-title {
     font-size: 48px;
   }
