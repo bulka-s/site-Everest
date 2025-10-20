@@ -1,0 +1,84 @@
+.certificate {
+  padding: 64px 0;
+  background-color: white;
+}
+
+.certificate-grid {
+  display: grid;
+  gap: 48px;
+  align-items: center;
+}
+
+.certificate-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+.certificate-content > p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(26, 26, 26, 0.8);
+  margin-bottom: 24px;
+}
+
+.certificate-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.certificate-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 16px;
+  color: rgba(26, 26, 26, 0.8);
+}
+
+.certificate-list li::before {
+  content: "✓";
+  color: #fd8d3c;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.certificate-preview {
+  background: linear-gradient(135deg, #fd8d3c, #ff6b35);
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(253, 141, 60, 0.3);
+  text-align: center;
+  color: white;
+}
+
+.certificate-preview h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.certificate-preview p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.certificate-preview small {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+@media (min-width: 1024px) {
+  .certificate {
+    padding: 96px 0;
+  }
+
+  .certificate-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .certificate-content h2 {
+    font-size: 48px;
+  }
+}

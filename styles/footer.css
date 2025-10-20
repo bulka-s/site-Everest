@@ -1,0 +1,59 @@
+.footer {
+  width: 100%;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 64px 0 32px;
+  box-sizing: border-box;
+}
+
+/* Центрируем содержимое и ограничиваем ширину */
+.footer .container {
+  max-width: 1200px; /* максимум ширины контента */
+  margin: 0 auto; /* центрирование по горизонтали */
+  padding: 0 2rem; /* внутренние отступы по бокам */
+}
+
+/* Сетка футера */
+.footer-grid {
+  display: grid;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  line-height: 1.8;
+}
+
+.footer-section a:hover {
+  color: #fd8d3c;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
