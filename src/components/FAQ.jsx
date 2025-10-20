@@ -54,7 +54,11 @@ export function FAQ() {
               className={`faq-item ${activeIndex === index ? "active" : ""}`}
             >
               <button className="faq-question" onClick={() => toggleFAQ(index)}>
-                <span>{faq.question}</span>
+                <div className="faq-left-block">
+                  <img src="/Question.svg" alt="" />
+                  <span>{faq.question}</span>
+                </div>
+
                 <svg
                   className="faq-icon"
                   viewBox="0 0 24 24"
