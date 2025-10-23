@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import "../../styles/registration.css";
 import CustomCheckbox from "./CustomCheckbox";
 import { CustomInput } from "./CustomInput";
+import "../../styles/registration.css";
+import "../../styles/popup.css";
 
-export function RegistrationForm() {
-  const [subscribe, setSubscribe] = useState(false);
+export function RegistrationPop() {
+  const [subPolice, setSubPolice] = useState(false);
+  const [subSend, setSubSend] = useState(false);
 
   return (
-    <section className="registration">
-      <div className="container">
-        <h2 className="registration-title">Запись на курс</h2>
+    <div className="registration-popup-overlay">
+      <div className="registration-popup">
+        <h2 className="registration-title">Зарегистрироваться</h2>
         <div className="registration-card">
           <form className="registration-form">
             <div className="form-group">
@@ -34,8 +36,13 @@ export function RegistrationForm() {
             </div>
             <div className="form-group checkbox-group">
               <CustomCheckbox
-                checked={subscribe}
-                onChange={(e) => setSubscribe(e.target.checked)}
+                checked={subPolice}
+                onChange={(e) => setSubPolice(e.target.checked)}
+                label={"Согласен с политикой конфедецальнсти"}
+              />
+              <CustomCheckbox
+                checked={subSend}
+                onChange={(e) => setSubSend(e.target.checked)}
                 label={"Получать полезную рассылку"}
               />
             </div>
@@ -43,11 +50,11 @@ export function RegistrationForm() {
               type="submit"
               className="btn btn-primary btn-lg form-submit"
             >
-              Записаться
+              Зарегистрироваться
             </button>
           </form>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

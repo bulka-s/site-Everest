@@ -37,25 +37,9 @@
   color: #1a1a1a;
 }
 
-.form-group input,
-.form-group select {
-  padding: 16px;
-  font-size: 18px;
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.178);
-  background: #fff;
-  transition: box-shadow 0.2s, border 0.2s;
-}
-
-.form-group input:focus,
-.form-group select:focus {
-  outline: none;
-}
-
 .checkbox-group {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 0;
 }
 
@@ -68,8 +52,22 @@
   cursor: pointer;
 }
 
-.checkbox-label input[type="checkbox"] {
-  display: none;
+.native-checkbox {
+  /* keep the native input for accessibility but visually hide it */
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+}
+
+.custom-checkbox-wrapper {
+  position: relative;
 }
 
 .custom-checkbox {
@@ -79,6 +77,31 @@
   width: 20px;
   height: 20px;
   margin-right: 4px;
+  background: #fff;
+  border: 2px solid #d7d7d7;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: background 0.12s, border-color 0.12s, transform 0.12s;
+}
+
+.custom-checkbox .checkmark {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.12s, transform 0.12s;
+}
+
+/* Checked state - use adjacent sibling selector via the hidden input inside the label */
+.custom-checkbox-wrapper .native-checkbox:checked + .custom-checkbox {
+  background: #fd8d3c;
+  border-color: #fd8d3c;
+}
+
+.custom-checkbox-wrapper
+  .native-checkbox:checked
+  + .custom-checkbox
+  .checkmark {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .form-submit {
@@ -101,7 +124,6 @@
 }
 
 @media (min-width: 1024px) {
-
   .registration-title {
     font-size: 48px;
   }

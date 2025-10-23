@@ -1,6 +1,6 @@
 import "../../styles/header.css";
 
-export function Header() {
+export function Header({ onRegisterClick }) {
   return (
     <header className="header">
       <div className="container header-container">
@@ -18,7 +18,9 @@ export function Header() {
 
         <div className="header-auth">
           <button className="btn btn-ghost">Войти</button>
-          <button className="btn btn-primary">Регистрация</button>
+          <button className="btn btn-primary" onClick={onRegisterClick}>
+            Регистрация
+          </button>
         </div>
       </div>
     </header>

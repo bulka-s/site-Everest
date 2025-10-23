@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
@@ -8,12 +9,14 @@ import { Certificate } from "./components/Certificate";
 import { Guarantees } from "./components/Guarantees";
 import { FAQ } from "./components/FAQ";
 import { RegistrationForm } from "./components/RegistrationForm";
+import { RegistrationPop } from "./components/RegistrationPop";
 import { Footer } from "./components/Footer";
 
 export default function Page() {
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
   return (
     <>
-      <Header />
+      <Header onRegisterClick={() => setIsRegistrationOpen(true)} />
       <div className="cont">
         <Hero />
         <About />
@@ -26,6 +29,11 @@ export default function Page() {
         <RegistrationForm />
       </div>
       <Footer />
+
+      <RegistrationPop
+        isOpen={isRegistrationOpen}
+        onClose={() => setIsRegistrationOpen(false)}
+      />
     </>
   );
 }
