@@ -4,9 +4,8 @@ import { CustomInput } from "./CustomInput";
 import "../../styles/registration.css";
 import "../../styles/popup.css";
 
-export function RegistrationPop({ isOpen, onClose }) {
-  const [subPolice, setSubPolice] = useState(false);
-  const [subSend, setSubSend] = useState(false);
+export function AuthPop({ isOpen, onClose }) {
+  const [remDevice, setRemDevice] = useState(false);
 
   if (!isOpen) {
     return null;
@@ -19,53 +18,31 @@ export function RegistrationPop({ isOpen, onClose }) {
       <span className="gradient-circle"></span>
       <img src="/cros.svg" alt="" className="popup-cros" onClick={onClose} />
       <div className="registration-popup">
-        <h2 className="registration-title">Регистрация</h2>
+        <h2 className="registration-title">Авторизация</h2>
         <div className="registration-card">
           <form className="registration-form">
-            <div className="form-group">
-              <CustomInput placeholder={"Имя"} id={"name"} type={"text"} />
-            </div>
-            <div className="form-group">
-              <CustomInput
-                placeholder={"Фамилия"}
-                id={"surname"}
-                type={"text"}
-              />
-            </div>
             <div className="form-group">
               <CustomInput placeholder={"E-mail"} id={"email"} type={"email"} />
             </div>
             <div className="form-group">
               <CustomInput
-                placeholder={"Номер телефона"}
-                id={"phone"}
-                type={"tel"}
-              />
-            </div>
-            <div className="form-group">
-              <CustomInput
-                placeholder={"Придумайте пароль"}
+                placeholder={"Пароль"}
                 id={"password"}
                 type={"password"}
               />
             </div>
             <div className="form-group checkbox-group">
               <CustomCheckbox
-                checked={subPolice}
-                onChange={(e) => setSubPolice(e.target.checked)}
-                label={"Согласен с политикой конфедецальнсти"}
-              />
-              <CustomCheckbox
-                checked={subSend}
-                onChange={(e) => setSubSend(e.target.checked)}
-                label={"Получать полезную рассылку"}
+                checked={remDevice}
+                onChange={(e) => setRemDevice(e.target.checked)}
+                label={"Запомнить это устройство"}
               />
             </div>
             <button
               type="submit"
               className="btn btn-primary btn-lg form-submit"
             >
-              Зарегистрироваться
+              Авторизоваться
             </button>
           </form>
         </div>

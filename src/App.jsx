@@ -10,13 +10,19 @@ import { Guarantees } from "./components/Guarantees";
 import { FAQ } from "./components/FAQ";
 import { RegistrationForm } from "./components/RegistrationForm";
 import { RegistrationPop } from "./components/RegistrationPop";
+import { AuthPop } from "./components/AuthPop";
 import { Footer } from "./components/Footer";
 
 export default function Page() {
   const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
+  const [isAuthOpen, setIsAuthOpen] = useState(false);
+
   return (
     <>
-      <Header onRegisterClick={() => setIsRegistrationOpen(true)} />
+      <Header
+        onRegisterClick={() => setIsRegistrationOpen(true)}
+        onLoginClick={() => setIsAuthOpen(true)}
+      />
       <div className="cont">
         <Hero />
         <About />
@@ -34,6 +40,7 @@ export default function Page() {
         isOpen={isRegistrationOpen}
         onClose={() => setIsRegistrationOpen(false)}
       />
+      <AuthPop isOpen={isAuthOpen} onClose={() => setIsAuthOpen(false)} />
     </>
   );
 }

@@ -12,5 +12,46 @@
   z-index: 1000;
 }
 
+.popup-cros {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.registration-back-line {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 .registration-popup {
+  position: relative;
+  z-index: 1;
+}
+
+.gradient-circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(163deg, #c6d18a, #f4f7f66a);
+  animation: pulse 6s infinite;
+}
+
+.gradient-circle:nth-child(2) {
+  height: 480px;
+  width: 480px;
+  top: 10%;
+  left: 15%;
+}
+.gradient-circle:nth-child(3) {
+  height: 180px;
+  width: 180px;
+  top: 30%;
+  right: 12%;
+  background: linear-gradient(44.6deg, #fd8d3c, #f4f7f66a);
 }
