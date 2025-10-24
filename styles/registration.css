@@ -53,7 +53,6 @@
 }
 
 .native-checkbox {
-  /* keep the native input for accessibility but visually hide it */
   position: absolute;
   opacity: 0;
   width: 1px;
@@ -90,16 +89,12 @@
   transition: opacity 0.12s, transform 0.12s;
 }
 
-/* Checked state - use adjacent sibling selector via the hidden input inside the label */
-.custom-checkbox-wrapper .native-checkbox:checked + .custom-checkbox {
+.custom-checkbox-wrapper .native-checkbox:checked+.custom-checkbox {
   background: #fd8d3c;
   border-color: #fd8d3c;
 }
 
-.custom-checkbox-wrapper
-  .native-checkbox:checked
-  + .custom-checkbox
-  .checkmark {
+.custom-checkbox-wrapper .native-checkbox:checked+.custom-checkbox .checkmark {
   opacity: 1;
   transform: scale(1);
 }

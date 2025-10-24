@@ -43,3 +43,9 @@ body {
   width: 244px;
   color: white;
 }
+
+@media (max-width: 768px) {
+  .cont {
+    padding: 0 16px;
+  }
+}

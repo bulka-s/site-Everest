@@ -12,6 +12,10 @@
   z-index: 1000;
 }
 
+.registration-popup .registration-card {
+  min-width: 400px;
+}
+
 .popup-cros {
   position: absolute;
   top: 20px;
@@ -48,6 +52,7 @@
   top: 10%;
   left: 15%;
 }
+
 .gradient-circle:nth-child(3) {
   height: 180px;
   width: 180px;

@@ -1,7 +1,6 @@
 .custom-input {
   position: relative;
   height: 52px;
-  width: 400px;
   display: grid;
   border-radius: 8px;
   box-shadow: 0px 0px 20px 0px rgb(200, 200, 200);
@@ -33,8 +32,8 @@
   font-size: 16px;
 }
 
-.custom-input input:focus + label,
-.custom-input input:valid + label,
+.custom-input input:focus+label,
+.custom-input input:valid+label,
 .custom-input:focus-within label {
   top: 24%;
   font-size: 12px;

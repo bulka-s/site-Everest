@@ -6,14 +6,14 @@
   box-sizing: border-box;
 }
 
-/* Центрируем содержимое и ограничиваем ширину */
+
 .footer .container {
-  max-width: 1200px; /* максимум ширины контента */
-  margin: 0 auto; /* центрирование по горизонтали */
-  padding: 0 2rem; /* внутренние отступы по бокам */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-/* Сетка футера */
+
 .footer-grid {
   display: grid;
   gap: 48px;
